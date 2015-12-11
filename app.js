@@ -4,6 +4,7 @@ var PORT = process.env.PORT || 3000;
 var MONGO_URL = (process.env.MONGOLAB_URI || 'mongodb://localhost/payments');
 
 var express = require('express');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
@@ -15,6 +16,7 @@ mongoose.connect(MONGO_URL, function(err){
 });
 
 var app = express();
+app.use(cors());
 
 app.set('view engine', 'jade');
 

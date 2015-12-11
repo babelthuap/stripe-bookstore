@@ -19,19 +19,20 @@
     "body-parser": "^1.14.1",
     "bower": "^1.6.5",
     "cookie-parser": "^1.4.0",
+    "cors": "^2.7.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
-    "jade": "^1.11.0",
-    "jwt-simple": "^0.4.0",
-    "mongoose": "^4.3.0",
-    "morgan": "^1.6.1",
-    "stripe": "^4.1.0",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
     "gulp-concat": "^2.6.0",
     "gulp-copy": "0.0.2",
     "gulp-run": "^1.6.12",
     "gulp-util": "^3.0.7",
-    "rimraf": "^2.4.4"
+    "jade": "^1.11.0",
+    "jwt-simple": "^0.4.0",
+    "mongoose": "^4.3.0",
+    "morgan": "^1.6.1",
+    "rimraf": "^2.4.4",
+    "stripe": "^4.1.0"
   }
 }
