@@ -1,0 +1,10 @@
+<h1>Shopping Cart</h1>
+<table class="table table-bordered">
+  <tbody>
+    <tr ng-repeat="book in cart track by $index">      
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.price}}</td>
+    </tr>
+  </tbody>
+</table>

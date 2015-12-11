@@ -8,6 +8,8 @@ app.constant('ENV', {
 
 app.run(function($rootScope, $localStorage) {
   $rootScope.$storage = $localStorage;
+  $rootScope.$storage.cart = [];
+
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -17,6 +19,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('home', { url: '/', templateUrl: 'templates/home.html'})
     .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'loginCtrl'})
     .state('register', { url: '/register', templateUrl: 'templates/register.html', controller: 'registerCtrl'})
+    .state('cart', { url: '/cart', templateUrl: 'templates/cart.html', controller: 'cartCtrl'})
 
     .state('books', { url: '/books', templateUrl: 'templates/books/layout.html', abstract: true })
     .state('books.index', { url: '/', templateUrl: 'templates/books/booksIndex.html', controller: 'booksIndexCtrl'})
