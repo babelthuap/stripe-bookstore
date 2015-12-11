@@ -3,6 +3,10 @@
 var app = angular.module('paymentApp');
 
 app.controller('cartCtrl', function($scope, $state, BookService, $http, ENV) {
+   if (!$scope.$storage.myToken){
+    return $state.go("home");
+  }
+  
   $scope.cart = $scope.$storage.cart;  
 
   $scope.total = $scope.cart.reduce(function(sum, book){

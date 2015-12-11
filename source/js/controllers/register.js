@@ -10,9 +10,10 @@ app.controller('registerCtrl', function($scope, $state, UserService) {
       return;
     }
     UserService.register(user)
-    .then(function(data){
+    .then(function(res){
+      console.log("data", res)
       $scope.$storage.myToken = res.data.token;
-      $state.go('home');
+      $state.go('books.index');
 
     }, function(err) {
       console.error(err);

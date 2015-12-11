@@ -7,4 +7,9 @@ app.controller('navCtrl', function($scope, $state) {
     delete $scope.$storage.myToken;
     $state.go('home');
   };
+
+  $scope.isAuthenticated = function(){
+    return $scope.$storage.myToken
+  }
+
 });

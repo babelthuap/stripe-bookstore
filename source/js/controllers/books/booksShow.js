@@ -3,6 +3,10 @@
 var app = angular.module('paymentApp');
 
 app.controller('booksShowCtrl', function($scope, $state, $http, ENV, BookService) {
+  if (!$scope.$storage.myToken){
+    return $state.go("home");
+  }
+
   BookService.show($state.params.bookId)
   .then(function(res) {
     $scope.book = res.data;

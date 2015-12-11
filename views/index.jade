@@ -16,15 +16,15 @@ html(lang='en')
           a.navbar-brand(ui-sref='home')= title
         #nav-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li
+            li(ng-if='isAuthenticated()')
               a(ui-sref='books.index')#booksLink Books
-            li
+            li(ng-if='isAuthenticated()')
               a(ui-sref='cart')#cartLink Cart              
-            li
+            li(ng-if='!isAuthenticated()')
               a(ui-sref='register')#registerLink Register
-            li
+            li(ng-if='!isAuthenticated()')
               a(ui-sref='login')#loginLink Login
-            li
+            li(ng-if='isAuthenticated()')
               a#logout(ng-click='logout()') Logout
     .container
       ui-view
