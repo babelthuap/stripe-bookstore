@@ -22,20 +22,14 @@ app.controller('booksShowCtrl', function($scope, $state, $http, ENV, BookService
     $state.go("cart")
   }
 
-
-
-  // $scope.inCart = function(){
-  //   console.log("incart is running")
- 
-  //   var thisBookId = $scope.book._id;
-  //   console.log("thisBookId", thisBookId)
+  $scope.inCart = function(){
+    var thisBookId = $state.params.bookId;
     
-  //   var cartIds = $scope.$storage.cart.map(function(book){
-  //     return book._id;  
-  //   })
-  // console.log("cartIds", cartIds)
-  //    hideButton = (cartIds.indexOf(thisBookId) !== -1)
-
-  // }
+    var cartIds = $scope.$storage.cart.map(function(book){
+      return book._id;  
+    })
+  
+    return cartIds.indexOf(thisBookId) !== -1
+  }
 
 });
