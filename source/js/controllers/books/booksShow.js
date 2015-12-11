@@ -18,11 +18,8 @@ app.controller('booksShowCtrl', function($scope, $state, $http, ENV, BookService
     var book =  $scope.book;
     $scope.$storage.cart.push(book);
     $scope.hideButton = true;    
-  // console.log($scope.hideButton);
-  //   console.log('cart:', $scope.$storage.cart);
-
-    //tell user that it was added to the cart
-    // ng-hide to button
+  
+    $state.go("cart")
   }
 
 

@@ -12,4 +12,5 @@ app.controller('navCtrl', function($scope, $state) {
     return $scope.$storage.myToken
   }
 
+  $scope.cart = $scope.$storage.cart;
 });

@@ -15,7 +15,7 @@
 </table>
 
 <p>Total: {{total | currency}}</p>
-<button class="btn btn-primary"
+<button class="btn btn-primary btn-lg"
         stripe-checkout="doCheckout"
         data-key="pk_test_HJNWPlajghxupBJagvAGHsAJ"
         data-name="Readable Book Checkout"
@@ -23,3 +23,7 @@
         ng-attr-data-amount="{{formatPrice(total)}}">
   Check&nbsp;Out<!-- BECAUSE IT'S TWO FUCKING WORDS -N -->
 </button>
+<button class="btn btn-lg btn-success" ui-sref="books.index">Continue Shopping</button>
+<br>
+<br>
+<button class="btn" ng-click="emptyCart()">Empty Cart</button>

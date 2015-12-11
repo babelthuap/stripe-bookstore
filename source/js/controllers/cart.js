@@ -6,7 +6,7 @@ app.controller('cartCtrl', function($scope, $state, BookService, $http, ENV) {
    if (!$scope.$storage.myToken){
     return $state.go("home");
   }
-  
+
   $scope.cart = $scope.$storage.cart;  
 
   $scope.total = $scope.cart.reduce(function(sum, book){
@@ -30,5 +30,10 @@ app.controller('cartCtrl', function($scope, $state, BookService, $http, ENV) {
   $scope.formatPrice = function(num) {
     return Math.round(num * 100);
   };
+
+  $scope.emptyCart = function(){
+    $scope.$storage.cart = [];
+    $state.go("books.index");
+  }
 
 });
