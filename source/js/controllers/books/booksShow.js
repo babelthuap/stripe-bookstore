@@ -8,6 +8,10 @@ app.controller('booksShowCtrl', function($scope, $state, $http, ENV, BookService
     $scope.book = res.data;
   });
 
+  $scope.addToCart = function() {
+    console.log('add to cart');
+  }
+
   $scope.doCheckout = function(tokenObj) {
     $http.post(`${ENV.API_URL}/checkout`, {
       tokenObj: tokenObj,
