@@ -12,13 +12,5 @@
   <button ui-sref='books.index' class="btn btn-default">Back to Books</button>
 </div>
 
-<hr>
-<button class="btn btn-primary"
-        stripe-checkout="doCheckout"
-        data-key="pk_test_HJNWPlajghxupBJagvAGHsAJ"
-        data-name="Readable Book Purchase"
-        ng-attr-data-description="{{book.title}}"
-        ng-attr-data-amount="{{formatPrice(book.price)}}">
-  Buy It!
-</button>
+
 

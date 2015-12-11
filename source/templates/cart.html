@@ -14,5 +14,12 @@
   </tbody>
 </table>
 
-<div>Total: {{total | currency}}
-</div>
+<p>Total: {{total | currency}}</p>
+<button class="btn btn-primary"
+        stripe-checkout="doCheckout"
+        data-key="pk_test_HJNWPlajghxupBJagvAGHsAJ"
+        data-name="Readable Book Checkout"
+        ng-attr-data-description="{{'Cart'}}"
+        ng-attr-data-amount="{{formatPrice(total)}}">
+  Check&nbsp;Out<!-- BECAUSE IT'S TWO FUCKING WORDS -N -->
+</button>
