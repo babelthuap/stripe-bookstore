@@ -9,7 +9,7 @@ app.controller('booksShowCtrl', function($scope, $state, $http, ENV, BookService
 
   BookService.show($state.params.bookId)
   .then(function(res) {
-    $scope.book = res.data;
+    $scope.book = res.data;1
   });
 
   // console.log($scope.hideButton);

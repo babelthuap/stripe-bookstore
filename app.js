@@ -1,7 +1,7 @@
 'use strict';
 
 var PORT = process.env.PORT || 3000;
-var MONGO_URL = 'mongodb://localhost/payments';
+var MONGO_URL = (process.env.MONGOLAB_URI || 'mongodb://localhost/payments');
 
 var express = require('express');
 var bodyParser = require('body-parser');
