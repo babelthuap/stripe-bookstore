@@ -6,7 +6,7 @@
   "author": "",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "bower i",
+    "postinstall": "gulp build && bower i",
     "setup": "rm -rf node_modules public/vendor && npm i && bower i"
   },
   "engines": {
