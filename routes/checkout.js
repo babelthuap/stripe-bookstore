@@ -7,15 +7,14 @@ var stripe = require("stripe")("sk_test_NdLgBtk5yLLjWKyNLrbP0XRd");
 
 router.post('/', function(req, res) {
   var tokenObj = req.body.tokenObj;
-  var book = req.body.book;
-
-  // add up total
+  var cart = req.body.cart;
+  var total = req.body.total;
 
   var charge = stripe.charges.create({
-    amount: Math.round(book.price * 100),
+    amount: Math.round(total * 100),
     currency: "usd",
     source: tokenObj.id,
-    description: `${book.title} by ${book.author}`
+    description: `Bunch of books` //EDIT LATER!
   }, function(err, charge) {
     res.status(err ? 400 : 200).send(err || charge);
   });

@@ -12,10 +12,12 @@ app.controller('cartCtrl', function($scope, $state, BookService, $http, ENV) {
   $scope.doCheckout = function(tokenObj) {
     $http.post(`${ENV.API_URL}/checkout`, {
       tokenObj: tokenObj,
-      book: $scope.book
-    })z1
+      cart: $scope.cart,
+      total: $scope.total
+    })
     .then(function(res) {
       console.log('res:', res);
+      $state.go('confirmation')
     }, function(err) {
       console.log('err:', err);
     })

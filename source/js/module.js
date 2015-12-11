@@ -20,6 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'loginCtrl'})
     .state('register', { url: '/register', templateUrl: 'templates/register.html', controller: 'registerCtrl'})
     .state('cart', { url: '/cart', templateUrl: 'templates/cart.html', controller: 'cartCtrl'})
+    .state('confirmation', { url: '/confirmation', templateUrl: 'templates/confirmation.html', controller: 'confirmationCtrl'})
 
     .state('books', { url: '/books', templateUrl: 'templates/books/layout.html', abstract: true })
     .state('books.index', { url: '/', templateUrl: 'templates/books/booksIndex.html', controller: 'booksIndexCtrl'})
