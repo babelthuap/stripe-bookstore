@@ -2,7 +2,7 @@
 _by Nicholas Neumann-Chun and Asami Kawamoto_
 
 This is a prototype of Stripe based payment system with a shopping App.
-*URL: [herokuurl] [PlDb]
+*URL: [https://rocky-harbor-1988.herokuapp.com] [PlDb]
 
 ### Feactures:
  - Login/Logout/Register
