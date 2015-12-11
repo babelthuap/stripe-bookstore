@@ -1,3 +1,10 @@
-# Express Example
+# Bookstore App with Angular and Stripe Payment
+_by Nicholas Neumann-Chun and Asami Kawamoto_
 
-First, cd into the project directory, and do `npm run setup` to install the dependencies listed in the package.json and bower.json.  Then you can start the server in Node.
+This is a prototype of Stripe based payment system with a shopping App.
+*URL: [herokuurl] [PlDb]
+
+### Feactures:
+ - Login/Logout/Register
+ - Shopping Cart
+ - Confirmation
